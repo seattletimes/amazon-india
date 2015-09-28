@@ -1,0 +1,47 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+@import "seattletimes";
+@import "flexbox";
+
+body {
+  max-width: 630px;
+}
+
+.title {
+  font-size: 28px;
+  font-family: @df-sans;
+  font-weight: bold;
+  text-align: center;
+}
+
+.flex-container {
+  .display-flex();
+  .align-items(center);
+}
+
+.fa {
+  .flex(0 0 40px);
+  text-align: center;
+  cursor: pointer;
+
+  &:hover {
+    color: @df-border-gray;
+  }
+
+  &.disabled {
+    color: @df-border-gray;
+  }
+}
+
+.slide-container img {
+  .flex(1);
+}
+
+.caption {
+  font-size: 16px;
+}

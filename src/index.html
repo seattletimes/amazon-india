@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+  <head>
+    <title><%= json.project.title %></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <%= t.include("partials/_head.html") %>
+  </head>
+  <body>
+
+    <responsive-child>
+
+      <div class="title">Cats in India</div>
+
+      <div class="slide-container">
+        <div class="flex-container">
+          <i class="fa previous fa-chevron-left"></i>
+          <div class="image"></div>
+          <i class="fa next fa-chevron-right"></i>
+        </div>
+
+        <div class="caption"></div>
+      </div>
+
+    </responsive-child>
+
+    <script>
+      var data = <%= JSON.stringify(csv.images) %>;
+    </script>
+    <script src="app.js" async></script>
+    <% if (json.project.production) { %>
+    <%= !json.project.embedded ? t.include("partials/_foot.html") : "" %>
+    <%= t.include("partials/_workHere.html") %>
+    <% } %>
+  </body>
+</html>
