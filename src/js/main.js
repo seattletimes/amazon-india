@@ -21,7 +21,7 @@ var changeImage = function() {
     document.querySelector(".previous").classList.remove("disabled");
   }
   document.querySelector(".caption").innerHTML = data[index].caption;
-  document.querySelector(".image").innerHTML = `<img src="http://placekitten.com/g/960/630">`;
+  document.querySelector(".image").innerHTML = `<img src="./assets/${data[index].image}">`;
 };
 
 changeImage();
