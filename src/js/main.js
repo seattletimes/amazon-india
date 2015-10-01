@@ -24,7 +24,13 @@ var changeImage = function() {
   }
   document.querySelector(".index").innerHTML = `${index + 1} of ${data.length}`;
   document.querySelector(".caption").innerHTML = data[index].caption;
-  document.querySelector(".image").innerHTML = `<img src="./assets/${data[index].image}">`;
+  var img = document.createElement("img");
+  img.src = `./assets/${data[index].image}`;
+  img.onload = function() {
+    var frame = document.querySelector(".image");
+    frame.innerHTML = "";
+    frame.appendChild(img);
+  }
 };
 
 changeImage();
