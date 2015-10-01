@@ -8,22 +8,25 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <%= t.include("partials/_head.html") %>
   </head>
-  <body>
+  <body class="slideshow">
 
     <responsive-child>
+      <div class="container">
+        <div class="title">How Amazon delivers some packages in India</div>
 
-      <div class="title">Cats in India</div>
+        <div class="slide-container">
 
-      <div class="slide-container">
-        <div class="flex-container">
-          <i class="fa previous fa-chevron-left"></i>
-          <div class="image"></div>
-          <i class="fa next fa-chevron-right"></i>
+          <div class="flex-container">
+            <i class="fa previous fa-chevron-circle-left"></i>
+            <div class="image"></div>
+            <i class="fa next fa-chevron-circle-right"></i>
+          </div>
+          
+          <div class="index"></div>
+          <div class="caption"></div>
+          <div class="credit">ILLUSTRATION BY GABRIEL CAMPANARIO / THE SEATTLE TIMES</div>
         </div>
-
-        <div class="caption"></div>
       </div>
-
     </responsive-child>
 
     <script>
