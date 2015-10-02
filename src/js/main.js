@@ -5,7 +5,6 @@
 require("component-responsive-frame/child");
 
 var dot = require("./lib/dot");
-var slide = dot.compile(require("./_slide.html"));
 
 var index = 0;
 
@@ -25,6 +24,7 @@ var changeImage = function() {
     document.querySelector(".previous").classList.remove("hidden");
   }
   document.querySelector(".index").innerHTML = `${index + 1} of ${data.length}`;
+  document.querySelector(".featured").innerHTML = data[index].featured;
   document.querySelector(".caption").innerHTML = data[index].caption;
   var img = document.createElement("img");
   img.src = `./assets/${data[index].image}`;
