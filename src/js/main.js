@@ -32,6 +32,7 @@ var changeImage = function() {
     var frame = document.querySelector(".image");
     frame.innerHTML = "";
     frame.appendChild(img);
+    img.removeAttribute("height");
   }
 };
 
