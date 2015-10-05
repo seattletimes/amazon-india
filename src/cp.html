@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+  <head>
+    <title><%= json.project.title %></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <%= t.include("partials/_head.html") %>
+  </head>
+  <body class="cp">
+
+    <responsive-child>
+      <a href="http://www.seattletimes.com/business/amazon/amazon-takes-cowboy-tactics-to-wild-wild-east-of-india/" target="_parent"><img src="./assets/amazon-animation1.gif"></a>
+      <div class="credit">GABRIEL CAMPANARIO / THE SEATTLE TIMES</div>
+    </responsive-child>
+
+    <script src="app.js" async></script>
+    <% if (json.project.production) { %>
+    <%= !json.project.embedded ? t.include("partials/_foot.html") : "" %>
+    <%= t.include("partials/_workHere.html") %>
+    <% } %>
+  </body>
+</html>
